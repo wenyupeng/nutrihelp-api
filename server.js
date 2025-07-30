@@ -1,5 +1,4 @@
 const app = require("./app");
-const { exec } = require("child_process");
 const cors = require("cors");
 const routes = require('./routes');
 
@@ -25,5 +24,5 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Start server
 app.listen(port, async () => {
 	console.log(`Server is running on port ${port}`);
-	exec(`start http://localhost:${port}/api-docs`);
+	console.log(`start http://localhost:${port}/api-docs`);
 });

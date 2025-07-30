@@ -1,5 +1,4 @@
-const addAppointment = require('../model/addAppointment.js');
-const getAllAppointments = require('../model/getAppointments.js');
+const { addAppointment, getAllAppointments } = require('../model/appointmentsModel');
 const { validationResult } = require('express-validator');
 
 // Function to handle saving appointment data

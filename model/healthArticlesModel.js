@@ -1,4 +1,4 @@
-const supabase = require('../dbConnection');
+const supabase = require('./dbConnection');
 
 const getHealthArticles = async (query) => {
   const { data, error } = await supabase

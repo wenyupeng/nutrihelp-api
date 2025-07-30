@@ -1,4 +1,4 @@
-const supabase = require('../dbConnection.js');
+const supabase = require('./dbConnection.js');
 
 async function addHistory(user_id, user_input, chatbot_response) {
   try {

@@ -1,3 +1,10 @@
+# abstract parameters
+some fix domain need to be parameter in env parameter
+- chtbotController.js
+
+# unify validate
+when validate the input, inject validateRequest in relevant routes.
+
 # update url
 ```js
 router.post('/query', chatbotController.getChatResponse);

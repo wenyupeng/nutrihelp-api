@@ -1,4 +1,4 @@
-const supabase = require('../dbConnection');
+const supabase = require('./dbConnection');
 
 const insertAuthLog = async ({email, user_id, success, ip_address, created_at}) => {
     const { error } = await supabase.from('auth_logs').insert([
