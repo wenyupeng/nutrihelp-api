@@ -1,5 +1,4 @@
 require("dotenv").config();
-require("./dbConnection");
 
 const folderInit = require('./middleware/folderInit');
 folderInit.init();
@@ -8,7 +7,7 @@ const express = require("express");
 const app = express();
 
 // apply global limiter
-const { globalLimiter } = require('./config/rateLimiter');
+const { globalLimiter } = require('./middleware/rateLimiter');
 app.use(globalLimiter);
 
 // helmet security

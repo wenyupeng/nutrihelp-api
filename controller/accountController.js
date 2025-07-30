@@ -1,4 +1,4 @@
-const { getMealPlanByUserIdAndDate } = require('../model/mealPlan');
+const { getMealPlanByUserIdAndDate } = require('../model/mealPlanModel');
 
 const getAllAccount = async (req, res) => {
     try {
