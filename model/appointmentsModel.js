@@ -1,4 +1,4 @@
-const supabase = require('../dbConnection.js');
+const supabase = require('./dbConnection.js');
 
 async function addAppointment(userId, date, time, description) {
     try {

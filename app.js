@@ -6,6 +6,8 @@ folderInit.init();
 const express = require("express");
 const app = express();
 
+require('./config/logger');
+
 // apply global limiter
 const { globalLimiter } = require('./middleware/rateLimiter');
 app.use(globalLimiter);

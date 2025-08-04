@@ -1,4 +1,4 @@
-const getHealthArticles = require('../model/getHealthArticles');
+const getHealthArticles = require('../model/healthArticlesModel');
 
 const searchHealthArticles = async (req, res) => {
   const { query } = req.query;

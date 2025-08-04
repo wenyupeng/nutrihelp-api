@@ -1,4 +1,4 @@
-const { insertAuthLog } = require('../model/auth_logs');
+const { insertAuthLog } = require('../model/authLogsModel');
 
 exports.logLoginAttempt = async (req, res) => {
   const { email, user_id, success, ip_address, created_at } = req.body
