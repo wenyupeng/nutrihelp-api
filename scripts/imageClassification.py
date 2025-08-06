@@ -28,7 +28,7 @@ def custom_warn_handler(message, category, filename, lineno, file=None, line=Non
 warnings.showwarning = custom_warn_handler
 
 # Get the relative path to the model file
-model_path = os.path.join('py-script/model', 'modeltt.h5')
+model_path = os.path.join('scripts/model', 'modeltt.h5')
 
 try:
     # Load the pre-trained model

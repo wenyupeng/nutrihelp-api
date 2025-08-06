@@ -33,7 +33,7 @@ const predictImage = (req, res) => {
       return res.status(500).json({ error: 'Internal server error' });
     }
 
-    const pythonProcess = spawn('python3', ['script/imageClassification.py']);
+    const pythonProcess = spawn('python', ['scripts/imageClassification.py']);
 
     pythonProcess.stdin.write(imageData);
     pythonProcess.stdin.end();
