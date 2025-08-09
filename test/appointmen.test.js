@@ -2,7 +2,7 @@ require("dotenv").config();
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const { expect } = chai;
-const deleteAppointment = require("../model/deleteAppointment");
+const { deleteAppointment } = require("../src/model/appointmentsModel");
 chai.use(chaiHttp);
 
 describe("Appointment: Test saveAppointment - Required Fields Not Entered", () => {

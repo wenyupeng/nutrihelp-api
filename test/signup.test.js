@@ -1,8 +1,7 @@
 require("dotenv").config();
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const deleteUser = require("../model/deleteUser");
-const getUser = require("../model/getUser");
+const {deleteUser,getUser} = require("../src/model/usersModel");
 const { addTestUser, deleteTestUser } = require("./test-helpers");
 const { expect } = chai;
 chai.use(chaiHttp);

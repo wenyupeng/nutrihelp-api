@@ -9,7 +9,7 @@ chai.use(chaiHttp);
 const { getTestServer } = require('./test-helpers.js');
 
 // Import the model function to stub
-const fetchIngredientSubstitutions = require('../model/fetchIngredientSubstitutions.js');
+const {fetchIngredientSubstitutions} = require('../src/model/ingredientsModel');
 
 describe('Ingredient Substitution API', () => {
     let server;
@@ -23,14 +23,14 @@ describe('Ingredient Substitution API', () => {
         // Create a stub for the fetchIngredientSubstitutions function
         fetchStub = sinon.stub();
         // Replace the original function with our stub
-        const originalModule = require('../model/fetchIngredientSubstitutions.js');
+        const originalModule = require('../src/model/fetchIngredientSubstitutions.js');
         // Save reference to the original module.exports
         const originalExports = module.exports;
         // Replace module.exports with our stub
         module.exports = fetchStub;
         // Restore the controller module to use our stub
-        delete require.cache[require.resolve('../controller/ingredientSubstitutionController.js')];
-        require('../controller/ingredientSubstitutionController.js');
+        delete require.cache[require.resolve('../src/controller/ingredientSubstitutionController.js')];
+        require('../src/controller/ingredientSubstitutionController.js');
     });
 
     afterEach(() => {

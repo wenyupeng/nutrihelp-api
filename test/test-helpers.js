@@ -1,5 +1,5 @@
-const deleteUser = require("../model/deleteUser");
-const supabase = require("../dbConnection.js");
+const { deleteUser } = require("../src/model/usersModel");
+const supabase = require("../src/model/dbConnection.js");
 const bcrypt = require("bcryptjs");
 
 async function addTestUser() {
